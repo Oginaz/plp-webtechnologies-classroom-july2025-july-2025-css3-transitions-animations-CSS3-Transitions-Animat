@@ -1,0 +1,72 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+  text-align: center;
+  color: #333;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: teal;
+}
+
+/* --- Part 1: CSS Animations --- */
+
+/* Floating button with hover color change */
+.fancy-btn {
+  background: teal;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  animation: float 3s ease-in-out infinite; /* continuous floating */
+  transition: background 0.3s ease;
+}
+
+.fancy-btn:hover {
+  background: darkcyan;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Animated box bouncing with keyframes */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 20px auto;
+  border-radius: 8px;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-40px); }
+}
+
+/* --- Part 3: CSS + JS --- */
+#magicBox {
+  width: 120px;
+  height: 120px;
+  background: royalblue;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: transform 1s ease, background 0.5s ease;
+}
+
+#magicBox.active {
+  transform: rotate(360deg) scale(1.2);
+  background: gold;
+}
